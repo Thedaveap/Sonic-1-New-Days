@@ -16,8 +16,8 @@ lvlsize macro left,right,top,bottom
 		;           |      |      |-------------------Top boundary
 		;           |      |      |      |------------Bottom boundary
 		; GHZ       |      |      |      |
-		lvlsize     0, $24BF,     0,  $300 ; GHZ1
-		lvlsize     0, $1EBF,     0,  $300 ; GHZ2
+		lvlsize     0, $39E1,     0,  $300 ; GHZ1
+		lvlsize     0, $3DBE,     0,  $300 ; GHZ2
 		lvlsize     0, $2960,     0,  $300 ; GHZ3
 		lvlsize     0, $2ABF,     0,  $300 ; GHZ4 (unused)
 		; LZ

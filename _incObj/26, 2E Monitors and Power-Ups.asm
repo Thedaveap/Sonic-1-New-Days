@@ -17,11 +17,11 @@ Mon_Index:	dc.w Mon_Main-Mon_Index				; 0 - init
 ; ===========================================================================
 
 Mon_Main:	; Routine 0
-;		cmpi.b	#$A,obSubtype(a0)			; is monitor subtype valid? i.e. no higher than goggles monitor (ID 8)
-;		bls.s	.valid					; if yes, branch
-;		move.b	#4,obSubtype(a0)		; otherwise, convert this monitor to an invisible solid barrier
+		cmpi.b	#$A,obSubtype(a0)			; is monitor subtype valid? i.e. no higher than goggles monitor (ID 8)
+		bls.s	.valid					; if yes, branch
+		move.b	#4,obSubtype(a0)		; otherwise, convert this monitor to an invisible solid barrier
 
-;.valid:
+.valid:
 		addq.b	#2,obRoutine(a0)			; go to "Mon_Solid" next
 		move.b	#28/2,obHeight(a0)			; set height
 		move.b	#28/2,obWidth(a0)			; set width

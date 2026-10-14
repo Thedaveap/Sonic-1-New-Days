@@ -83,6 +83,7 @@ PLC_Main:	plcheader
 		plcm	KosPM_Hud,	ArtTile_HUD			; HUD
 		plcm	KosPM_Lives,	ArtTile_Lives_Counter		; lives counter
 		plcm	KosPM_Sparkles,	ArtTile_Sparkles		; ring sparkles
+		plcm	KosPM_Lamp,	ArtTile_Lamppost		; lamppost
 PLC_Main_end:
 
 ; ---------------------------------------------------------------------------
@@ -90,7 +91,6 @@ PLC_Main_end:
 ; ---------------------------------------------------------------------------
 PLC_Main2:	plcheader
 		plcm	KosPM_Monitors,	ArtTile_Monitor			; monitors
-		plcm	KosPM_Lamp,	ArtTile_Lamppost		; lamppost
 PLC_Main2_end:
 
 ; ---------------------------------------------------------------------------

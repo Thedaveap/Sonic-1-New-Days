@@ -144,6 +144,38 @@ fr_RollInbetween2:	equ fr_RollInbetween1+1
 fr_RollInbetween3:	equ fr_RollInbetween2+1
 fr_RollInbetween4:	equ fr_RollInbetween3+1
 fr_WaitInbetween:	equ fr_RollInbetween4+1
+fr_BetaRun11:	equ fr_WaitInbetween+1
+fr_BetaRun12:	equ fr_BetaRun11+1
+fr_BetaRun13:	equ fr_BetaRun12+1
+fr_BetaRun14:	equ fr_BetaRun13+1
+fr_BetaRun21:	equ fr_BetaRun14+1
+fr_BetaRun22:	equ fr_BetaRun21+1
+fr_BetaRun23:	equ fr_BetaRun22+1
+fr_BetaRun24:	equ fr_BetaRun23+1
+fr_BetaRun31:	equ fr_BetaRun24+1
+fr_BetaRun32:	equ fr_BetaRun31+1
+fr_BetaRun33:	equ fr_BetaRun32+1
+fr_BetaRun34:	equ fr_BetaRun33+1
+fr_BetaRun41:	equ fr_BetaRun34+1
+fr_BetaRun42:	equ fr_BetaRun41+1
+fr_BetaRun43:	equ fr_BetaRun42+1
+fr_BetaRun44:	equ fr_BetaRun43+1
+fr_ManiaPeelout_11:	equ fr_BetaRun44+1
+fr_ManiaPeelout_12:	equ fr_ManiaPeelout_11+1
+fr_ManiaPeelout_13:	equ fr_ManiaPeelout_12+1
+fr_ManiaPeelout_14:	equ fr_ManiaPeelout_13+1
+fr_ManiaPeelout_21:	equ fr_ManiaPeelout_14+1
+fr_ManiaPeelout_22:	equ fr_ManiaPeelout_21+1
+fr_ManiaPeelout_23:	equ fr_ManiaPeelout_22+1
+fr_ManiaPeelout_24:	equ fr_ManiaPeelout_23+1
+fr_ManiaPeelout_31:	equ fr_ManiaPeelout_24+1
+fr_ManiaPeelout_32:	equ fr_ManiaPeelout_31+1
+fr_ManiaPeelout_33:	equ fr_ManiaPeelout_32+1
+fr_ManiaPeelout_34:	equ fr_ManiaPeelout_33+1
+fr_ManiaPeelout_41:	equ fr_ManiaPeelout_34+1
+fr_ManiaPeelout_42:	equ fr_ManiaPeelout_41+1
+fr_ManiaPeelout_43:	equ fr_ManiaPeelout_42+1
+fr_ManiaPeelout_44:	equ fr_ManiaPeelout_43+1
 
 ; Super Sonic frame IDs
 fr_Transform1:		equ fr_Victory2+1
@@ -226,6 +258,7 @@ id_Transform:	sonani	SonAni_Transform	; $22
 id_Fall:		sonani  SonAni_Fall	; $23
 id_SpringJump:		sonani  SonAni_SpringJump	; $23
 id_DropDash:		sonani  SonAni_DropDash	; $23
+id_BetaRun:		sonani  SonAni_BetaRun	; $24
 
 ; ---------------------------------------------------------------------------
 ; --- Special animations (walk/run/roll/push) ---
@@ -262,7 +295,12 @@ SonAni_Push:	dc.b $FD
 		even
 
 SonAni_Figure8:	dc.b $FF
-		dc.b fr_Figure8_11, fr_Figure8_12, fr_Figure8_13, fr_Figure8_14, afEnd, afEnd
+		dc.b fr_ManiaPeelout_11, fr_ManiaPeelout_12, fr_ManiaPeelout_13, fr_ManiaPeelout_14, afEnd, afEnd
+		dc.b afEnd
+		even
+
+SonAni_BetaRun:	dc.b $FF
+		dc.b fr_BetaRun11,  fr_BetaRun12,  fr_BetaRun13,  fr_BetaRun14,  afEnd,	 afEnd
 		dc.b afEnd
 		even
 

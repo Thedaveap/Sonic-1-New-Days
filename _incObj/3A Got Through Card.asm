@@ -261,21 +261,11 @@ Got_SBZ2_MoveOut: ; Routine $E
 
 	; .checkOffScreen:
 		move.w	obX(a0),d0				; get current x-position of card
-		bmi.s	.return					; if it's negative, don't display
 		cmpi.w	#$80+320+64,d0				; has card moved beyond $200 on x-axis (to the right)?
-	if FixBugs
-		; See the fix at Card_NoMove
-		bgt.s	.return					; if yes, branch
+		jgt	Card_ChangeArt				; if yes, branch
 		cmpi.w	#$80-64+16,d0				; has card moved beyond $50 on the x-axis (to the left)?
-		bgt.w	DisplaySprite				; if not, display card
-	else
-		bhs.s	.return					; if yes, branch
-		bra.w	DisplaySprite				; display card
-	endif
-
-	; locret_C748:
-	.return:
-		rts						; don't display card
+		jle	Card_ChangeArt				; if yes, branch
+		bra.w	DisplaySprite				; otherwise, keep displaying card
 ; ---------------------------------------------------------------------------
 
 	; Got_SBZ2:

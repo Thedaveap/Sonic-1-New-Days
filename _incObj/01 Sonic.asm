@@ -2583,7 +2583,7 @@ Sonic_Animate:
 		cmpi.w	#$A00,d2		; is Sonic at peelout speed?
 		bhs.s	.running		; if yes, branch
 
-		lea	(SonAni_Run).l,a1	; use running animation
+		lea	(SonAni_BetaRun).l,a1	; use running animation
 		cmpi.w	#$600,d2		; is Sonic at running speed?
 		bhs.s	.running		; if yes, branch
 
@@ -3049,6 +3049,7 @@ Sonic_Fall:
 		rts
 ; End of function Sonic_Fall
 
+; ===========================================================================
 ; ---------------------------------------------------------------------------
 ; Subroutine to horizontally pan the camera view ahead of the player.
 ; (Ported from the US version of Sonic CD's "R11A__.MMD" by Nat The Porcupine)

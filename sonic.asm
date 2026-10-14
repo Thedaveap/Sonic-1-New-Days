@@ -21,7 +21,7 @@ FixBugs = 1
 ;	| If 1, enables various bugfixes across the game and sound driver
 ;	|       (see also the "_Fixed Binary Files" folder, and FixMusicAndSFXDataBugs)
 
-CheatsEnabled = 0
+CheatsEnabled = 1
 ;	| If 1, all in-game cheats (Level Select, Debug Mode, Slow-Motion, Japanese Credits)
 ;	|       will be enabled by default, without requiring any title screen button inputs
 
