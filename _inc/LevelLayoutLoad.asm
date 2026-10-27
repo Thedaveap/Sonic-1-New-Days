@@ -33,7 +33,7 @@ LevelDataLoad:
 		moveq	#0,d0
 		move.b	(a2),d0					; load 2nd PLC entry from level headers
 		beq.s	.skipPLC				; if 2nd PLC is 0 (i.e. the ending sequence), branch
-		bsr.w	AddPLC					; load secondary pattern load cues
+		jsr	AddPLC					; load secondary pattern load cues
 	.skipPLC:
 		rts
 ; End of function LevelDataLoad
@@ -101,7 +101,7 @@ LoadZoneTiles:
 		andi.l	#$FFFFFF,d0    		; Filter out the first byte, which contains the first PLC ID, leaving the address of the zone's art in d0
 		movea.l	d0,a0			; Load the address of the zone's art into a0 (source)
 		lea	(v_ram_start).l,a1	; Load v_ram_start (in this context, an art buffer) into a1 (destination)
-		bsr.w   KosDec			; Decompress a0 to a1 (Kosinski compression)
+		jsr   KosDec			; Decompress a0 to a1 (Kosinski compression)
 
 		move.w	a1,d3			; Move a word of a1 to d3, note that a1 doesn't exactly contain the address of v_ram_start anymore, after KosDec, a1 now contains v_ram_start + the size of the file decompressed to it, d3 now contains the length of the file that was decompressed
 		move.w	d3,d7			; Move d3 to d7, for use in separate calculations

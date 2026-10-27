@@ -5,6 +5,34 @@
         {
             "format": "Sonic 1.js",
             "name": "object",
+            "palettes": [
+                {
+                    "path": "..\\palette\\Green Hill Zone.bin",
+                    "length": 1
+                }
+            ],
+            "art": {
+                "path": "..\\artkos\\8x8 - GHZ.kos",
+                "compression": "Kosinski",
+                "offset": 0,
+                "extra": []
+            },
+            "mappings": {
+                "path": "",
+                "label": ""
+            },
+            "dplcs": {
+                "enabled": false,
+                "path": "",
+                "label": ""
+            },
+            "config": {
+                "mapMacros": true
+            }
+        },
+        {
+            "format": "Sonic 1.js",
+            "name": "object",
             "palettes": [],
             "art": {
                 "path": "..\\artkospm\\Title Screen Foreground.kospm",
@@ -1709,7 +1737,7 @@
                 }
             ],
             "isDirectory": true,
-            "expanded": false,
+            "expanded": true,
             "config": {}
         },
         {
@@ -4123,7 +4151,7 @@
                 }
             ],
             "isDirectory": true,
-            "expanded": false,
+            "expanded": true,
             "config": {}
         },
         {

@@ -1,87 +1,63 @@
-; --------------------------------------------------------------------------------
-; Sprite mappings - output from ClownMapEd - Sonic 1/CD format
-; --------------------------------------------------------------------------------
+Map_9eff: mappingsTable
+	mappingsTableEntry.w	CME_911C0926_0
+	mappingsTableEntry.w	CME_911C0926_1
+	mappingsTableEntry.w	CME_911C0926_2
+	mappingsTableEntry.w	CME_911C0926_3
+	mappingsTableEntry.w	CME_911C0926_4
+	mappingsTableEntry.w	Map_9eff_5
+	mappingsTableEntry.w	Map_9eff_6
+	mappingsTableEntry.w	Map_9eff_7
+	mappingsTableEntry.w	Map_9eff_8
 
-CME_911C0926:
-	dc.w	CME_911C0926_0-CME_911C0926
-	dc.w	CME_911C0926_1-CME_911C0926
-	dc.w	CME_911C0926_2-CME_911C0926
-	dc.w	CME_911C0926_3-CME_911C0926
-	dc.w	CME_911C0926_4-CME_911C0926
+CME_911C0926_0:	spriteHeader
+ spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
+ spritePiece 0, -$10, 3, 4, 0, 1, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $C, 0, 0, 0, 0
+CME_911C0926_0_End
 
-CME_911C0926_0:
-	dc.b	3
+CME_911C0926_1:	spriteHeader
+ spritePiece -$10, -$10, 4, 4, 0, 0, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $10, 0, 0, 0, 0
+CME_911C0926_1_End
 
-	dc.b	-16
-	dc.b	$0B
-	dc.w	$0000
-	dc.b	-24
+CME_911C0926_2:	spriteHeader
+ spritePiece -4, -$10, 1, 4, 0, 0, 0, 0, 0
+ spritePiece -4, $10, 1, 2, 4, 1, 0, 0, 0
+CME_911C0926_2_End
 
-	dc.b	-16
-	dc.b	$0B
-	dc.w	$0800
-	dc.b	0
+CME_911C0926_3:	spriteHeader
+ spritePiece -$10, -$10, 4, 4, 0, 1, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $10, 1, 0, 0, 0
+CME_911C0926_3_End
 
-	dc.b	16
-	dc.b	$01
-	dc.w	$000C
-	dc.b	-4
+CME_911C0926_4:	spriteHeader
+ spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
+ spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
+CME_911C0926_4_End
 
-CME_911C0926_1:
-	dc.b	2
+Map_9eff_5:	spriteHeader
+ spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
+ spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
+Map_9eff_5_End
 
-	dc.b	-16
-	dc.b	$0F
-	dc.w	$0000
-	dc.b	-16
+Map_9eff_6:	spriteHeader
+ spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
+ spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
+Map_9eff_6_End
 
-	dc.b	16
-	dc.b	$01
-	dc.w	$0010
-	dc.b	-4
+Map_9eff_7:	spriteHeader
+ spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
+ spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
+Map_9eff_7_End
 
-CME_911C0926_2:
-	dc.b	2
-
-	dc.b	-16
-	dc.b	$03
-	dc.w	$0000
-	dc.b	-4
-
-	dc.b	16
-	dc.b	$01
-	dc.w	$0804
-	dc.b	-4
-
-CME_911C0926_3:
-	dc.b	2
-
-	dc.b	-16
-	dc.b	$0F
-	dc.w	$0800
-	dc.b	-16
-
-	dc.b	16
-	dc.b	$01
-	dc.w	$0810
-	dc.b	-4
-
-CME_911C0926_4:
-	dc.b	3
-
-	dc.b	-16
-	dc.b	$0B
-	dc.w	$0000
-	dc.b	-24
-
-	dc.b	-16
-	dc.b	$0B
-	dc.w	$000C
-	dc.b	0
-
-	dc.b	16
-	dc.b	$01
-	dc.w	$0018
-	dc.b	-4
+Map_9eff_8:	spriteHeader
+ spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
+ spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
+ spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
+Map_9eff_8_End
 
 	even

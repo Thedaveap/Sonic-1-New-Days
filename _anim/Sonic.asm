@@ -2,6 +2,7 @@
 ; Sonic frame IDs
 ; ---------------------------------------------------------------------------
 
+; Sonic frame IDs
 fr_Null:	equ 0
 fr_Stand:	equ 1
 fr_Wait1:	equ 2
@@ -14,171 +15,93 @@ fr_Walk13:	equ 8
 fr_Walk14:	equ 9
 fr_Walk15:	equ $A
 fr_Walk16:	equ $B
-fr_Walk21:	equ $C
-fr_Walk22:	equ $D
-fr_Walk23:	equ $E
-fr_Walk24:	equ $F
-fr_Walk25:	equ $10
-fr_Walk26:	equ $11
-fr_Walk31:	equ $12
-fr_Walk32:	equ $13
-fr_Walk33:	equ $14
-fr_Walk34:	equ $15
-fr_Walk35:	equ $16
-fr_Walk36:	equ $17
-fr_Walk41:	equ $18
-fr_Walk42:	equ $19
-fr_Walk43:	equ $1A
-fr_Walk44:	equ $1B
-fr_Walk45:	equ $1C
-fr_Walk46:	equ $1D
-fr_Run11:	equ $1E
-fr_Run12:	equ $1F
-fr_Run13:	equ $20
-fr_Run14:	equ $21
-fr_Run21:	equ $22
-fr_Run22:	equ $23
-fr_Run23:	equ $24
-fr_Run24:	equ $25
-fr_Run31:	equ $26
-fr_Run32:	equ $27
-fr_Run33:	equ $28
-fr_Run34:	equ $29
-fr_Run41:	equ $2A
-fr_Run42:	equ $2B
-fr_Run43:	equ $2C
-fr_Run44:	equ $2D
-fr_Roll1:	equ $2E
-fr_Roll2:	equ $2F
-fr_Roll3:	equ $30
-fr_Roll4:	equ $31
-fr_Roll5:	equ $32
-fr_Warp1:	equ $33
-fr_Warp2:	equ $34
-fr_Warp3:	equ $35
-fr_Warp4:	equ $36
-fr_Stop1:	equ $37
-fr_Stop2:	equ $38
-fr_Duck:	equ $39
-fr_Balance1:	equ $3A
-fr_Balance2:	equ $3B
-fr_Float1:	equ $3C
-fr_Float2:	equ $3D
-fr_Float3:	equ $3E
-fr_Float4:	equ $3F
-fr_Spring:	equ $40
-fr_Hang1:	equ $41
-fr_Hang2:	equ $42
-fr_Leap1:	equ $43
-fr_Leap2:	equ $44
-fr_Push1:	equ $45
-fr_Push2:	equ $46
-fr_Push3:	equ $47
-fr_Push4:	equ $48
-fr_Surf:	equ $49
-fr_BubStand:	equ $4A
-fr_Burnt:	equ $4B
-fr_Drown:	equ $4C
-fr_Death:	equ $4D
-fr_Shrink1:	equ $4E
-fr_Shrink2:	equ $4F
-fr_Shrink3:	equ $50
-fr_Shrink4:	equ $51
-fr_Shrink5:	equ $52
-fr_Float5:	equ $53
-fr_Float6:	equ $54
-fr_Injury:	equ $55
-fr_GetAir:	equ $56
-fr_Slide:	equ $57 ; formerly named fr_WaterSlide (was too long...)
-fr_SpinDash1:	equ $58
-fr_SpinDash2:	equ fr_SpinDash1+1
-fr_SpinDash3:	equ fr_SpinDash2+1
-fr_SpinDash4:	equ fr_SpinDash3+1
-fr_SpinDash5:	equ fr_SpinDash4+1
-fr_SpinDash6:	equ fr_SpinDash5+1
-fr_Figure8_11:	equ fr_SpinDash6+1
-fr_Figure8_12:	equ fr_Figure8_11+1
-fr_Figure8_13:	equ fr_Figure8_12+1
-fr_Figure8_14:	equ fr_Figure8_13+1
-fr_Figure8_21:	equ fr_Figure8_14+1
-fr_Figure8_22:	equ fr_Figure8_21+1
-fr_Figure8_23:	equ fr_Figure8_22+1
-fr_Figure8_24:	equ fr_Figure8_23+1
-fr_Figure8_31:	equ fr_Figure8_24+1
-fr_Figure8_32:	equ fr_Figure8_31+1
-fr_Figure8_33:	equ fr_Figure8_32+1
-fr_Figure8_34:	equ fr_Figure8_33+1
-fr_Figure8_41:	equ fr_Figure8_34+1
-fr_Figure8_42:	equ fr_Figure8_41+1
-fr_Figure8_43:	equ fr_Figure8_42+1
-fr_Figure8_44:	equ fr_Figure8_43+1
-fr_Victory1:	equ fr_Figure8_44+1
-fr_Victory2:	equ fr_Victory1+1
-fr_SpringTwirl1:	equ fr_SuperBalance6+1
-fr_SpringTwirl2:	equ fr_SpringTwirl1+1
-fr_SpringTwirl3:	equ fr_SpringTwirl2+1
-fr_SpringTwirl4:	equ fr_SpringTwirl3+1
-fr_SpringTwirl5:	equ fr_SpringTwirl4+1
-fr_Fall1:	   equ fr_SpringTwirl5+1
-fr_Fall2:	   equ fr_Fall1+1
-fr_Dropdash1:	   equ fr_Fall2+1
-fr_Dropdash2:	   equ fr_Dropdash1+1
-fr_Dropdash3:	   equ fr_Dropdash2+1
-fr_Dropdash4:	   equ fr_Dropdash3+1
-fr_Dropdash5:	   equ fr_Dropdash4+1
-fr_Dropdash6:	   equ fr_Dropdash5+1
-fr_Dropdash7:	   equ fr_Dropdash6+1
-fr_Dropdash8:	   equ fr_Dropdash7+1
-fr_BalanceForward1:	equ fr_Dropdash8+1
-fr_BalanceForward2:	equ fr_BalanceForward1+1
-fr_BalanceForward3:	equ fr_BalanceForward2+1
-fr_BalanceForward4:	equ fr_BalanceForward3+1
-fr_BalanceBack1:	equ fr_BalanceForward4+1
-fr_BalanceBack2:	equ fr_BalanceBack1+1
-fr_BalanceBack3:	equ fr_BalanceBack2+1
-fr_BalanceBack4:	equ fr_BalanceBack3+1
-fr_DuckInbetween:	equ fr_BalanceBack4+1
-fr_LookUpInbetween:	equ fr_DuckInbetween+1
-fr_RollInbetween1:	equ fr_LookUpInbetween+1
-fr_RollInbetween2:	equ fr_RollInbetween1+1
-fr_RollInbetween3:	equ fr_RollInbetween2+1
-fr_RollInbetween4:	equ fr_RollInbetween3+1
-fr_WaitInbetween:	equ fr_RollInbetween4+1
-fr_BetaRun11:	equ fr_WaitInbetween+1
-fr_BetaRun12:	equ fr_BetaRun11+1
-fr_BetaRun13:	equ fr_BetaRun12+1
-fr_BetaRun14:	equ fr_BetaRun13+1
-fr_BetaRun21:	equ fr_BetaRun14+1
-fr_BetaRun22:	equ fr_BetaRun21+1
-fr_BetaRun23:	equ fr_BetaRun22+1
-fr_BetaRun24:	equ fr_BetaRun23+1
-fr_BetaRun31:	equ fr_BetaRun24+1
-fr_BetaRun32:	equ fr_BetaRun31+1
-fr_BetaRun33:	equ fr_BetaRun32+1
-fr_BetaRun34:	equ fr_BetaRun33+1
-fr_BetaRun41:	equ fr_BetaRun34+1
-fr_BetaRun42:	equ fr_BetaRun41+1
-fr_BetaRun43:	equ fr_BetaRun42+1
-fr_BetaRun44:	equ fr_BetaRun43+1
-fr_ManiaPeelout_11:	equ fr_BetaRun44+1
-fr_ManiaPeelout_12:	equ fr_ManiaPeelout_11+1
-fr_ManiaPeelout_13:	equ fr_ManiaPeelout_12+1
-fr_ManiaPeelout_14:	equ fr_ManiaPeelout_13+1
-fr_ManiaPeelout_21:	equ fr_ManiaPeelout_14+1
-fr_ManiaPeelout_22:	equ fr_ManiaPeelout_21+1
-fr_ManiaPeelout_23:	equ fr_ManiaPeelout_22+1
-fr_ManiaPeelout_24:	equ fr_ManiaPeelout_23+1
-fr_ManiaPeelout_31:	equ fr_ManiaPeelout_24+1
-fr_ManiaPeelout_32:	equ fr_ManiaPeelout_31+1
-fr_ManiaPeelout_33:	equ fr_ManiaPeelout_32+1
-fr_ManiaPeelout_34:	equ fr_ManiaPeelout_33+1
-fr_ManiaPeelout_41:	equ fr_ManiaPeelout_34+1
-fr_ManiaPeelout_42:	equ fr_ManiaPeelout_41+1
-fr_ManiaPeelout_43:	equ fr_ManiaPeelout_42+1
-fr_ManiaPeelout_44:	equ fr_ManiaPeelout_43+1
+fr_Walk17:	equ $C	; <-- new
+fr_Walk18:	equ $D	; <-- new
+fr_Walk21:	equ $E
+fr_Walk22:	equ $F
+fr_Walk23:	equ $10
+fr_Walk24:	equ $11
+fr_Walk25:	equ $12
+fr_Walk26:	equ $13
+fr_Walk27:	equ $14	; <-- new
+fr_Walk28:	equ $15	; <-- new
+fr_Walk31:	equ $16
+fr_Walk32:	equ $17
+fr_Walk33:	equ $18
+fr_Walk34:	equ $19
+fr_Walk35:	equ $1A
+fr_Walk36:	equ $1B
+fr_Walk37:	equ $1C	; <-- new
+fr_Walk38:	equ $1D	; <-- new
+fr_Walk41:	equ $1E
+fr_Walk42:	equ $1F
+fr_Walk43:	equ $20
+fr_Walk44:	equ $21
+fr_Walk45:	equ $22
+fr_Walk46:	equ $23
+fr_Walk47:	equ $24	; <-- new
+fr_Walk48:	equ $25	; <-- new
+fr_Run11:	equ $26	; every frame ID from here on out has been increased by 8 
+fr_Run12:	equ $27
+fr_Run13:	equ $28
+fr_Run14:	equ $29
+fr_Run21:	equ $2A
+fr_Run22:	equ $2B
+fr_Run23:	equ $2C
+fr_Run24:	equ $2D
+fr_Run31:	equ $2E
+fr_Run32:	equ $2F
+fr_Run33:	equ $30
+fr_Run34:	equ $31
+fr_Run41:	equ $32
+fr_Run42:	equ $33
+fr_Run43:	equ $34
+fr_Run44:	equ $35
+fr_Roll1:	equ $96
+fr_Roll2:	equ $37
+fr_Roll3:	equ $38
+fr_Roll4:	equ $39
+fr_Roll5:	equ $3A
+fr_Warp1:	equ $3B
+fr_Warp2:	equ $3C
+fr_Warp3:	equ $3D
+fr_Warp4:	equ $3E
+fr_Stop1:	equ $3F
+fr_Stop2:	equ $40
+fr_Duck:	equ $41
+fr_Balance1:	equ $42
+fr_Balance2:	equ $43
+fr_Float1:	equ $44
+fr_Float2:	equ $45
+fr_Float3:	equ $46
+fr_Float4:	equ $47
+fr_Spring:	equ $48
+fr_Hang1:	equ $49
+fr_Hang2:	equ $4A
+fr_Leap1:	equ $4B
+fr_Leap2:	equ $4C
+fr_Push1:	equ $4D
+fr_Push2:	equ $4E
+fr_Push3:	equ $4F
+fr_Push4:	equ $50
+fr_Surf:	equ $51
+fr_BubStand:	equ $52
+fr_Burnt:	equ $53
+fr_Drown:	equ $54
+fr_Death:	equ $55
+fr_Shrink1:	equ $56
+fr_Shrink2:	equ $57
+fr_Shrink3:	equ $58
+fr_Shrink4:	equ $59
+fr_Shrink5:	equ $5A
+fr_Float5:	equ $5B
+fr_Float6:	equ $5C
+fr_Injury:	equ $5D
+fr_GetAir:	equ $5E
+fr_Slide:	equ $5F ; formerly mamed fr_WaterSlide (was too long...)
 
 ; Super Sonic frame IDs
-fr_Transform1:		equ fr_Victory2+1
+fr_Transform1:		equ fr_Slide+1
 fr_Transform2:		equ fr_Transform1+1
 fr_Transform3:		equ fr_Transform2+1
 fr_Transform4:		equ fr_Transform3+1
@@ -206,6 +129,45 @@ fr_SuperBalance4:	equ fr_SuperBalance3+1
 fr_SuperBalance5:	equ fr_SuperBalance4+1
 fr_SuperBalance6:	equ fr_SuperBalance5+1
 
+; Misc. Sprites
+fr_SpinDash1:	equ fr_SuperBalance6+1
+fr_SpinDash2:	equ fr_SpinDash1+1
+fr_SpinDash3:	equ fr_SpinDash2+1
+fr_SpinDash4:	equ fr_SpinDash3+1
+fr_SpinDash5:	equ fr_SpinDash4+1
+fr_SpinDash6:	equ fr_SpinDash5+1
+fr_Victory1:	equ fr_SpinDash6+1
+fr_Victory2:	equ fr_Victory1+1
+fr_Figure8_11:	equ fr_Victory2+1
+fr_Figure8_12:	equ fr_Figure8_11+1
+fr_Figure8_13:	equ fr_Figure8_12+1
+fr_Figure8_14:	equ fr_Figure8_13+1
+fr_Figure8_21:	equ fr_Figure8_14+1
+fr_Figure8_22:	equ fr_Figure8_21+1
+fr_Figure8_23:	equ fr_Figure8_22+1
+fr_Figure8_24:	equ fr_Figure8_23+1
+fr_Figure8_31:	equ fr_Figure8_24+1
+fr_Figure8_32:	equ fr_Figure8_31+1
+fr_Figure8_33:	equ fr_Figure8_32+1
+fr_Figure8_34:	equ fr_Figure8_33+1
+fr_Figure8_41:	equ fr_Figure8_34+1
+fr_Figure8_42:	equ fr_Figure8_41+1
+fr_Figure8_43:	equ fr_Figure8_42+1
+fr_Figure8_44:	equ fr_Figure8_43+1
+fr_Fall1:       equ	fr_Figure8_44+3
+fr_Fall2:       equ fr_Fall1+1
+fr_Blink:       equ fr_Fall2+1
+fr_Dropdash1:	equ	fr_Blink+1
+fr_Dropdash2:	equ	fr_Dropdash1+1
+fr_Dropdash3:	equ	fr_Dropdash2+1
+fr_Dropdash4:	equ	fr_Dropdash3+1
+fr_Dropdash5:	equ	fr_Dropdash4+1
+fr_Dropdash6:	equ	fr_Dropdash5+1
+fr_Dropdash7:	equ	fr_Dropdash6+1
+fr_Dropdash8:	equ	fr_Dropdash7+1
+fr_DuckTransition:	equ	fr_Dropdash8+1
+fr_LookUpTransition:	equ	fr_DuckTransition+1
+
 ; ---------------------------------------------------------------------------
 ; Animation script - Sonic
 ; ---------------------------------------------------------------------------
@@ -225,8 +187,8 @@ id_Roll:	sonani	SonAni_Roll	; $02
 id_Roll2:	sonani	SonAni_Roll2	; $03
 id_Push:	sonani	SonAni_Push	; $04
 id_Wait:	sonani	SonAni_Wait	; $05
+id_BalanceBack:	sonani	SonAni_BalanceBack	; $06
 id_BalanceForward:	sonani	SonAni_BalanceForward	; $06
-id_BalanceBack:	sonani	SonAni_BalanceBack	; $07
 id_LookUp:	sonani	SonAni_LookUp	; $07
 id_Duck:	sonani	SonAni_Duck	; $08
 id_Warp1:	sonani	SonAni_Warp1	; $09
@@ -252,55 +214,45 @@ id_Null:	sonani	SonAni_Null	; $1C
 id_Float3:	sonani	SonAni_Float3	; $1D
 id_Float4:	sonani	SonAni_Float4	; $1E
 id_SpinDash:	sonani	SonAni_SpinDash	; $1F
-id_Figure8:	sonani	SonAni_Figure8	; $20
-id_Victory:	sonani	SonAni_Victory	; $21
-id_Transform:	sonani	SonAni_Transform	; $22
-id_Fall:		sonani  SonAni_Fall	; $23
-id_SpringJump:		sonani  SonAni_SpringJump	; $23
-id_DropDash:		sonani  SonAni_DropDash	; $23
-id_BetaRun:		sonani  SonAni_BetaRun	; $24
+id_Victory:	sonani	SonAni_Victory	; $20
+id_Figure8:	sonani	SonAni_Figure8	; $21
+id_Fall:        sonani  SonAni_Fall	; $22
 
 ; ---------------------------------------------------------------------------
 ; --- Special animations (walk/run/roll/push) ---
 ; Sonic handles animations with a start value of $80 or greater separately.
-; All special animations need to have EXACTLY 6 frames (plus one afEnd),
+; All special animations need to have EXACTLY 8 frames (plus one afEnd),
 ; animations that are too short have extra afEnd to pad to the same length.
 ; This is because the special animation handler switches between these
 ; animations without resetting the animation positon.
 
 SonAni_Walk:	dc.b $FF
-		dc.b fr_Walk13, fr_Walk14, fr_Walk15, fr_Walk16, fr_Walk11, fr_Walk12
+		dc.b 7, 8, 9, $A, $B, $C, 1, 2, 3, 4, 5, 6
 		dc.b afEnd
 		even
 
 SonAni_Run:	dc.b $FF
-		dc.b fr_Run11,  fr_Run12,  fr_Run13,  fr_Run14,  afEnd,	 afEnd
-		dc.b afEnd
+		dc.b $10+$21,  $10+$22,  $10+$23,  $10+$24,  afEnd,     afEnd,  afEnd,     afEnd,  afEnd,     afEnd,  afEnd,     afEnd
+		dc.b afEnd 
 		even
 
 SonAni_Roll:	dc.b $FE
-		dc.b fr_Roll1, fr_RollInbetween1,  fr_Roll2, fr_RollInbetween2,  fr_Roll3, fr_RollInbetween3
-		dc.b fr_Roll4, fr_RollInbetween4,  fr_Roll5,  afEnd
+		dc.b $97,  $F1,  $98,  $F2,  $99,  $F3,  $9A,  $F4,  $96,  afEnd,  afEnd,  afEnd,  afEnd,     afEnd,  afEnd,     afEnd
 		dc.b afEnd
 		even
 
 SonAni_Roll2:	dc.b $FE
-		dc.b fr_Roll1, fr_RollInbetween1,  fr_Roll2, fr_RollInbetween2,  fr_Roll5,  fr_Roll3, fr_RollInbetween3,  fr_Roll4, fr_RollInbetween4,  fr_Roll5
+		dc.b $97,  $F1,  $98,  $F2,  $96,  $99,  $F3,  $9A,  $F4,  $96,  afEnd,  afEnd,  afEnd,     afEnd,  afEnd,     afEnd
 		dc.b afEnd
 		even
 
 SonAni_Push:	dc.b $FD
-		dc.b fr_Push1,  fr_Push2,  fr_Push3,  fr_Push4,  afEnd,	 afEnd
+		dc.b $B6,  $B7,  $B8,  $B9,  afEnd,     afEnd,  afEnd,  afEnd,  afEnd,     afEnd,  afEnd,     afEnd
 		dc.b afEnd
 		even
 
 SonAni_Figure8:	dc.b $FF
-		dc.b fr_ManiaPeelout_11, fr_ManiaPeelout_12, fr_ManiaPeelout_13, fr_ManiaPeelout_14, afEnd, afEnd
-		dc.b afEnd
-		even
-
-SonAni_BetaRun:	dc.b $FF
-		dc.b fr_BetaRun11,  fr_BetaRun12,  fr_BetaRun13,  fr_BetaRun14,  afEnd,	 afEnd
+		dc.b $DA, $DB, $DC, $DD, afEnd, afEnd, afEnd, afEnd,  afEnd,     afEnd,  afEnd,     afEnd
 		dc.b afEnd
 		even
 
@@ -312,31 +264,33 @@ SonAni_BetaRun:	dc.b $FF
 ; 	dc.b afBack, 5		; go back specified number of frames
 ; 	dc.b afChange, id_Surf	; switch to a different animation
 
-SonAni_Wait:	dc.b 23
-		dc.b fr_Stand, fr_Stand, fr_Stand, fr_Stand, fr_Stand, fr_Stand
-		dc.b fr_Stand, fr_Stand, fr_Stand, fr_Stand, fr_Stand, fr_Stand
-		dc.b fr_WaitInbetween, fr_Wait1, fr_Wait1
-		dc.b fr_Wait2, fr_Wait3	; looped
-		dc.b afBack, 2
+SonAni_Wait:	dc.b 5
+		dc.b  $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA
+		dc.b  $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA
+		dc.b  $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA, $BA
+		dc.b  $BA, $BA, $BA, $BB, $BC, $BC, $BD, $BD, $BE, $BE, $BD, $BD, $BE, $BE, $BD, $BD
+		dc.b  $BE, $BE, $BD, $BD, $BE, $BE, $BD, $BD, $BE, $BE, $BD, $BD, $BE, $BE, $BD, $BD
+		dc.b  $BE, $BE, $BD, $BD, $BE, $BE, $AD, $AD, $AD, $AD, $AD, $AD, $AE, $AE, $AE, $AE
+		dc.b  $AE, $AE, $AF, $D9, $D9, $D9, $D9, $D9, $D9, $AF, $AF, $FE, $35
 		even
 
-SonAni_BalanceForward:	dc.b 15
-		dc.b fr_BalanceForward1, fr_BalanceForward2, fr_BalanceForward3, fr_BalanceForward4
+SonAni_BalanceBack:	dc.b 7
+		dc.b $A4, $A5, $A6, $FF
 		dc.b afEnd
 		even
 
-SonAni_BalanceBack:	dc.b 15
-		dc.b fr_BalanceBack1, fr_BalanceBack2, fr_BalanceBack3, fr_BalanceBack4
+SonAni_BalanceForward:	dc.b 5
+		dc.b $A1, $A2, $A3, $FF
 		dc.b afEnd
 		even
 
 SonAni_LookUp:	dc.b 5
-		dc.b fr_LookUpInbetween, fr_LookUp
+		dc.b $C3, $C4
 		dc.b afBack, 1
 		even
 
 SonAni_Duck:	dc.b 5
-		dc.b fr_DuckInbetween, fr_Duck
+		dc.b $9B, $9C
 		dc.b afBack, 1
 		even
 
@@ -360,36 +314,30 @@ SonAni_Warp4:	dc.b 63
 		dc.b afEnd
 		even
 
-SonAni_Stop:	dc.b 7
-		dc.b fr_Stop1, fr_Stop2
+SonAni_Stop:	dc.b 3
+		dc.b $9D, $9E, $9F, $A0, $FD,   0
 		dc.b afEnd
 		even
 
 SonAni_Float1:	dc.b 7
-		dc.b fr_Float1, fr_Float4
+		dc.b $C8, $FF
 		dc.b afEnd
 		even
 
 SonAni_Float2:	dc.b 7
-		dc.b fr_Float1, fr_Float2, fr_Float5, fr_Float3, fr_Float6
+		dc.b $C8, $C9, $CA, $CB, $CC, $CD, $CE, $CF, $FF
 		dc.b afEnd
 		even
 
 SonAni_Spring:	dc.b 3
-				dc.b fr_SpringTwirl1, fr_SpringTwirl2, fr_SpringTwirl3, fr_SpringTwirl4, fr_SpringTwirl5
-		dc.b fr_SpringTwirl1, fr_SpringTwirl2, fr_SpringTwirl3, fr_SpringTwirl4, fr_SpringTwirl5
-		dc.b fr_SpringTwirl1, fr_SpringTwirl2, fr_SpringTwirl3, fr_SpringTwirl4, fr_SpringTwirl5
-		dc.b afChange, id_Fall
+                dc.b $EC, $ED, $EE, $EF, $F0
+		dc.b $EC, $ED, $EE, $EF, $F0
+		dc.b $EC, $ED, $EE, $EF, $F0
+		dc.b afChange, id_Walk
 		even
 
-SonAni_SpringJump:	dc.b 2
-				dc.b fr_SpringTwirl1, fr_SpringTwirl2, fr_SpringTwirl3, fr_SpringTwirl4, fr_SpringTwirl5
-		dc.b fr_SpringTwirl1, fr_SpringTwirl2, fr_SpringTwirl3, fr_SpringTwirl4, fr_SpringTwirl5
-		dc.b afChange, id_Fall
-		even
-
-SonAni_Hang:	dc.b 4
-		dc.b fr_Hang1, fr_Hang2
+SonAni_Hang:	dc.b 1
+		dc.b $AA, $AB, $FF
 		dc.b afEnd
 		even
 
@@ -410,23 +358,23 @@ SonAni_Surf:	dc.b 63
 		dc.b afEnd
 		even
 
-SonAni_GetAir:	dc.b 11
-		dc.b fr_GetAir, fr_GetAir, fr_Walk15, fr_Walk16
-		dc.b afChange, id_Fall
+SonAni_GetAir:	dc.b $B
+		dc.b $AC, $AC,   3,   4, $FD,   0
+		dc.b afChange, id_Walk
 		even
 
 SonAni_Burnt:	dc.b 32
-		dc.b fr_Burnt
+		dc.b $A8
 		dc.b afEnd
 		even
 
 SonAni_Drown:	dc.b 47
-		dc.b fr_Drown
+		dc.b $A9
 		dc.b afEnd
 		even
 
-SonAni_Death:	dc.b 9
-		dc.b fr_Death, fr_Drown
+SonAni_Death:	dc.b 25
+		dc.b $A7,	$A9
 		dc.b afBack, 1
 		even
 
@@ -436,13 +384,13 @@ SonAni_Shrink:	dc.b 3
 		dc.b afBack, 1
 		even
 
-SonAni_Hurt:	dc.b 3
-		dc.b fr_Injury
+SonAni_Hurt:	dc.b $40
+		dc.b $8D, $FF
 		dc.b afEnd
 		even
 
 SonAni_Slide:	dc.b 7
-		dc.b fr_Injury, fr_Slide
+		dc.b $8C, $8D, $FF
 		dc.b afEnd
 		even
 
@@ -452,37 +400,27 @@ SonAni_Null:	dc.b 119
 		even
 
 SonAni_Float3:	dc.b 3
-		dc.b fr_Float1, fr_Float2, fr_Float5, fr_Float3, fr_Float6
+		dc.b $C8, $CA, $CC, $CD, $CE, $FE,   4
 		dc.b afEnd
 		even
 
 SonAni_Float4:	dc.b 3
-		dc.b fr_Float1
+		dc.b $C8
 		dc.b afChange, id_Walk
 		even
 
 SonAni_SpinDash:
 		dc.b 0
-		dc.b fr_SpinDash1, fr_SpinDash2, fr_SpinDash1, fr_SpinDash3, fr_SpinDash1
-		dc.b fr_SpinDash4, fr_SpinDash1, fr_SpinDash5, fr_SpinDash1, fr_SpinDash6
+		dc.b $86, $87, $86, $88, $86, $89, $86, $8A, $86, $8B
 		dc.b afEnd
 		even
 
-SonAni_Victory:	dc.b 6
-		dc.b fr_Victory1, fr_Victory2
+SonAni_Victory:	dc.b 7
+		dc.b $B0, $B2, $B2, $B2, $B2, $B2, $B2, $B1, $B2, $B3, $B2, $FE,   4
 		dc.b afEnd
 		even
 
-SonAni_Transform: dc.b   2
-		dc.b fr_Transform1, fr_Transform1, fr_Transform2, fr_Transform2, fr_Transform3, fr_Transform4, fr_Transform5, fr_Transform4, fr_Transform5, fr_Transform4, fr_Transform5, fr_Transform4, fr_Transform5
-		dc.b afChange, id_Walk
-		even
-
-SonAni_Fall:	dc.b 3
-				dc.b fr_Fall1, fr_Fall2
-				dc.b afEnd
-				even
-SonAni_DropDash:	dc.b 0
-		dc.b fr_Dropdash1, fr_Roll5, fr_Dropdash2, fr_Roll5, fr_Dropdash3, fr_Roll5, fr_Dropdash4, fr_Roll5
-		dc.b fr_Dropdash5, fr_Roll5, fr_Dropdash6, fr_Roll5, fr_Dropdash7, fr_Roll5, fr_Dropdash8, fr_Roll5, afEnd
+SonAni_Fall:    dc.b 3
+		dc.b $EA, $EB
+		dc.b afEnd
 		even

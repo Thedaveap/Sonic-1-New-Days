@@ -35,12 +35,9 @@ Ani_SuperSonic:
 		dc.w SonAni_Float3-Ani_SuperSonic
 		dc.w SonAni_Float4-Ani_SuperSonic
 		dc.w SonAni_SpinDash-Ani_SuperSonic
-		dc.w SonAni_Figure8-Ani_SuperSonic
 		dc.w SonAni_Victory-Ani_SuperSonic
-		dc.w SonAni_Transform-Ani_SuperSonic
+		dc.w SonAni_Figure8-Ani_SuperSonic
 		dc.w SonAni_Fall-Ani_SuperSonic
-		dc.w SonAni_SpringJump-Ani_SuperSonic
-		dc.w SonAni_DropDash-Ani_SuperSonic
 
 SupSonAni_Walk:		dc.b $FF, fr_SuperWalk13, fr_SuperWalk14, fr_SuperWalk15, fr_SuperWalk16, fr_SuperWalk11, fr_SuperWalk12, afEnd
 		even

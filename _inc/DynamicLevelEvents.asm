@@ -181,11 +181,11 @@ DLE_GHZ3_Boss:
 
 	.fail:
 		move.w	#bgm_Boss,d0
-		bsr.w	QueueSound1				; play boss music
+		jsr	QueueSound1				; play boss music
 		move.b	#1,(f_lockscreen).w			; lock screen
 		addq.b	#2,(v_dle_routine).w			; goto DLE_GHZ3_End next
 		moveq	#plcid_Boss,d0
-		bra.w	AddPLC					; load boss gfx
+		jmp	AddPLC					; load boss gfx
 ; ===========================================================================
 
 .exit:
@@ -230,7 +230,7 @@ DLE_LZ3:
 		beq.s	.skip_layout				; branch if already modified
 		move.b	#7,(a1)					; modify level layout
 		move.w	#sfx_Rumbling,d0
-		bsr.w	QueueSound2				; play rumbling sound
+		jsr	QueueSound2				; play rumbling sound
 
 	.skip_layout:
 		tst.b	(v_dle_routine).w
@@ -251,11 +251,11 @@ DLE_LZ3:
 
 	.fail:
 		move.w	#bgm_Boss,d0
-		bsr.w	QueueSound1				; play boss music
+		jsr	QueueSound1				; play boss music
 		move.b	#1,(f_lockscreen).w			; lock screen
 		addq.b	#2,(v_dle_routine).w			; don't load boss again
 		moveq	#plcid_Boss,d0
-		bra.w	AddPLC					; load boss gfx
+		jmp	AddPLC					; load boss gfx
 ; ===========================================================================
 
 .skip_boss2:
@@ -459,11 +459,11 @@ DLE_MZ3_Boss:
 
 	.fail:
 		move.w	#bgm_Boss,d0
-		bsr.w	QueueSound1				; play boss music
+		jsr	QueueSound1				; play boss music
 		move.b	#1,(f_lockscreen).w			; lock screen
 		addq.b	#2,(v_dle_routine).w			; goto DLE_MZ3_End next
 		moveq	#plcid_Boss,d0
-		bra.w	AddPLC					; load boss gfx
+		jmp	AddPLC					; load boss gfx
 ; ===========================================================================
 
 .exit:
@@ -531,11 +531,11 @@ DLE_SLZ3_Boss:
 
 	.fail:
 		move.w	#bgm_Boss,d0
-		bsr.w	QueueSound1				; play boss music
+		jsr	QueueSound1				; play boss music
 		move.b	#1,(f_lockscreen).w			; lock screen
 		addq.b	#2,(v_dle_routine).w			; goto DLE_SLZ3_End next
 		moveq	#plcid_Boss,d0
-		bra.w	AddPLC					; load boss gfx
+		jmp	AddPLC					; load boss gfx
 ; ===========================================================================
 
 .exit:
@@ -625,10 +625,10 @@ DLE_SYZ3_Boss:
 
 	.fail:
 		move.w	#bgm_Boss,d0
-		bsr.w	QueueSound1				; play boss music
+		jsr	QueueSound1				; play boss music
 		move.b	#1,(f_lockscreen).w			; lock screen
 		moveq	#plcid_Boss,d0
-		bra.w	AddPLC					; load boss gfx
+		jmp	AddPLC					; load boss gfx
 ; ===========================================================================
 
 .exit:
@@ -711,7 +711,7 @@ DLE_SBZ2_Blocks:
 		move.b	#id_FalseFloor,obID(a1)			; load collapsing block object
 		addq.b	#2,(v_dle_routine).w			; goto DLE_SBZ2_Eggman next
 		moveq	#plcid_EggmanSBZ2,d0
-		bra.w	AddPLC					; load SBZ2 Eggman gfx
+		jmp	AddPLC					; load SBZ2 Eggman gfx
 ; ===========================================================================
 
 .exit:
@@ -766,7 +766,7 @@ DLE_FZ_Main:
 
 		addq.b	#2,(v_dle_routine).w			; goto DLE_FZ_Boss next
 		moveq	#plcid_FZBoss,d0
-		bsr.w	AddPLC					; load FZ boss gfx
+		jsr	AddPLC					; load FZ boss gfx
 
 	.set_boundary:
 		bra.s	DLE_SBZ2_SetBoundary

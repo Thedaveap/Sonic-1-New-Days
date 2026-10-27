@@ -211,8 +211,6 @@ React_CollisionDetected:
 ; ---------------------------------------------------------------------------
 
 React_Monitor:
-		cmpi.b	#id_DropDash,obAnim(a0)			; is Sonic Drop Dashing? 
-		beq.w	.chkBreakMonitorPart2				; if yes, branch
 		cmpi.b	#id_Roll,obAnim(a0)			; is Sonic rolling/jumping?
 		bne.s	.return					; if not, don't break monitor
 
@@ -233,8 +231,6 @@ React_Monitor:
 React_Enemy:
 		tst.b	(v_invinc).w				; is Sonic invincible?
 		bne.s	.checkBossHit				; if yes, branch
-		cmpi.b	#id_DropDash,obAnim(a0)			; is Sonic Drop Dashing? 
-		beq.w	.checkBossHit				; if yes, branch
 		cmpi.b	#id_SpinDash,obAnim(a0)			; is Sonic Spin Dashing? 
 		beq.w	.checkBossHit				; if yes, branch
 		cmpi.b	#id_Roll,obAnim(a0)			; is Sonic rolling/jumping?

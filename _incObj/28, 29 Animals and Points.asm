@@ -148,7 +148,7 @@ Anml_Main:	; Routine 0
 Anml_FromEnemy:
 		addq.b	#2,obRoutine(a0)			; advance to Anml_ChkFloor
 
-		bsr.w	RandomNumber				; get random number to select animal to spawn
+		jsr	RandomNumber				; get random number to select animal to spawn
 		andi.w	#1,d0					; limit to two choices
 		moveq	#0,d1					; clear d1
 		move.b	(v_zone).w,d1				; get current zone ID

@@ -1337,14 +1337,6 @@ Sonic_JumpHeight:
 
 ; locret_134C2:
 .return:
-		tst.b	(f_lockctrl).w		; are controls locked?
-		bne.s	.no_super		; if yes, don't allow transformation
-		move.b	(v_jpadpress2).w,d0
-		andi.b	#btnA,d0		; is A, B or C pressed (fresh press only)?
-		beq.s	.no_super		; if not, branch
-		bra.w	Sonic_CheckGoSuper
-.no_super:
-		rts
 ; ===========================================================================
 
 ; loc_134C4:
@@ -1434,6 +1426,8 @@ locret_11A14:
 ; ---------------------------------------------------------------------------
 
 Sonic_CheckGoSuper:
+		rts
+
 		tst.b	(v_supersonic).w	; already Super?
 		bne.w	Sonic_Super.revert	; if yes, revert on button press
 		cmpi.b	#6,(v_emeralds).w	; all 6 Chaos Emeralds collected?
@@ -1452,7 +1446,6 @@ Sonic_CheckGoSuper:
 		clr.b	(v_supersonic_palframe).w	; clear palette frames		<-- add
 		move.b	#1,(v_supersonic).w		; set Super Sonic flag
 		move.b	#1,(f_playerctrl).w		; lock movement during transformation	<-- add
-		move.b	#id_Transform,obAnim(a0)	; play transformation animation
 		move.w	#$A00,(v_sonspeedmax).w
 		move.w	#$30,(v_sonspeedacc).w
 		move.w	#$100,(v_sonspeeddec).w
@@ -1488,6 +1481,8 @@ Sonic_CheckGoSuper:
 ; ---------------------------------------------------------------------------
 
 Sonic_Super:
+		rts
+
 		tst.b	(v_supersonic).w	; is Sonic Super?
 		beq.w	.exit			; if not, do nothing
 
@@ -2583,15 +2578,13 @@ Sonic_Animate:
 		cmpi.w	#$A00,d2		; is Sonic at peelout speed?
 		bhs.s	.running		; if yes, branch
 
-		lea	(SonAni_BetaRun).l,a1	; use running animation
+		lea	(SonAni_Run).l,a1	; use running animation
 		cmpi.w	#$600,d2		; is Sonic at running speed?
 		bhs.s	.running		; if yes, branch
 
 		lea	(SonAni_Walk).l,a1	; use walking animation
 .superwalk:
-		move.b	d0,d1
-		lsr.b	#1,d1
-		add.b	d1,d0
+		add.b	d0,d0
 
 .running:
 		add.b	d0,d0
@@ -2895,7 +2888,6 @@ Sonic_HomingAttack:
 
 		move.w	#sfx_Teleport,d0			; play dash sound as a test
 		jsr	(QueueSound2).l				; (PlaySound_Special in older disassemblies)
-		move.b	#id_DropDash,obAnim(a0)			; make sure Spin Dash animation stays
 
 		bsr.s	FindHomingTarget			; check if any homing targets are in range
 		beq.s	RegularJumpdash				; if not, do a regular jumpdash instead
@@ -3024,29 +3016,15 @@ Sonic_AirRoll:
 ; ---------------------------------------------------------------------------
 
 Sonic_Fall:
-		cmpi.b	#id_GetAir,obAnim(a0)			; is Sonic in his get air animation?
-		beq.s	.return					; if true, branch
-		cmpi.b	#id_Spring,obAnim(a0)			; is Sonic in his spring animation?
-		beq.s	.return					; if true, branch
-		cmpi.b	#id_SpringJump,obAnim(a0)		; is Sonic in his spring jumping animation?
-		beq.s	.return					; if true, branch
-		cmpi.b	#id_Roll,obAnim(a0)			; is Sonic in his rolling animation?
-		beq.s	.return					; if true, branch
-		cmpi.b	#id_Float1,obAnim(a0)			; is Sonic in his floating animation?
-		beq.s	.return					; if true, branch
-		cmpi.b	#id_Float2,obAnim(a0)			; is Sonic in his floating animation?
-		beq.s	.return					; if true, branch
-		cmpi.b	#id_Float3,obAnim(a0)			; is Sonic in his floating animation?
-		beq.s	.return					; if true, branch
-		cmpi.b	#id_Transform,obAnim(a0)			; is Sonic in his floating animation?
-		beq.s	.return					; if true, branch
+		tst.b	obAnim(a0)				; is Sonic in his default walk/run animation?
+		bne.s	.return					; if not, don't change animation
+		tst.w	obVelY(a0)				; is Sonic falling down?
+		bmi.s	.return					; if still going upwards, branch
 		move.b	#id_Fall,obAnim(a0)			; use "falling" animation
-		bclr	#2,obStatus(a0)				; clear rolling flag
-		move.b	#sonic_height,obHeight(a0)		; set height to normal size
-		move.b	#sonic_width,obWidth(a0)		; set width to normal size
 
-.return:
+	.return:
 		rts
+
 ; End of function Sonic_Fall
 
 ; ===========================================================================
