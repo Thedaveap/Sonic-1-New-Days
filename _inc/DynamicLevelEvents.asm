@@ -78,6 +78,7 @@ DLE_GHZ:
 DLE_GHZx:	dc.w DLE_GHZ1-DLE_GHZx
 		dc.w DLE_GHZ2-DLE_GHZx
 		dc.w DLE_GHZ3-DLE_GHZx
+		dc.w DLE_GHZ4-DLE_GHZx
 ; ===========================================================================
 ; Green Hill Zone - Act 1
 
@@ -194,6 +195,19 @@ DLE_GHZ3_Boss:
 
 DLE_GHZ3_End:
 		move.w	(v_screenposx).w,(v_limitleft2).w	; set boundary to current position
+		rts
+
+; ===========================================================================
+; Green Hill Zone - Act 4
+
+DLE_GHZ4:
+		move.w	#$300,(v_limitbtm1).w			; initial boundary
+		cmpi.w	#$1780,(v_screenposx).w
+		blo.s	.exit					; branch if camera is left of $1780
+
+		move.w	#$400,(v_limitbtm1).w			; set lower y-boundary
+
+	.exit:
 		rts
 
 ; ===========================================================================

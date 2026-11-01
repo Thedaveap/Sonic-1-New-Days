@@ -19,7 +19,7 @@ lvlsize macro left,right,top,bottom
 		lvlsize     0, $39E1,     0,  $300 ; GHZ1
 		lvlsize     0, $3DBE,     0,  $300 ; GHZ2
 		lvlsize     0, $2960,     0,  $300 ; GHZ3
-		lvlsize     0, $2ABF,     0,  $300 ; GHZ4 (unused)
+		lvlsize     0, $24BF,     0,  $300 ; GHZ4
 		; LZ
 		lvlsize     0, $19BF,     0,  $530 ; LZ1
 		lvlsize     0, $10AF,     0,  $720 ; LZ2

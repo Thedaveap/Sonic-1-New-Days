@@ -170,7 +170,7 @@ Vectors:
 		dc.b "(C)SEGA 1991.APR"				; Copyright holder and release date (generally year)
 	rept 2
 		 ; Name (identical for domestic and overseas version)
-		dc.b "SONIC THE               HEDGEHOG                "
+		dc.b "SONIC THE HEDGEHOG REMASTERED                   "
 	endr
 
 	if Revision=0
@@ -2100,6 +2100,7 @@ LevSel_Ptrs:
 		dc.w id_GHZ_act1	; 0   GHZ 1
 		dc.w id_GHZ_act2	; 1   GHZ 2
 		dc.w id_GHZ_act3	; 2   GHZ 3
+		dc.w id_GHZ_act4	; 2.5   GHZ 4
 		dc.w id_MZ_act1		; 3   MZ 1
 		dc.w id_MZ_act2		; 4   MZ 2
 		dc.w id_MZ_act3		; 5   MZ 3
@@ -2125,6 +2126,7 @@ LevelSelect_SwitchTable:
 		dc.b $F		; 0   GHZ1 → SBZ1
 		dc.b $10	; 1   GHZ2 → SBZ2
 		dc.b $11	; 2   GHZ3 → SBZ3/LZ4
+		dc.b $12	; 2.5   GHZ4 → SBZ3/LZ4
 		dc.b $12	; 3   MZ1  → FZ
 		dc.b $12	; 4   MZ2  → FZ
 		dc.b $12	; 5   MZ3  → FZ
@@ -2204,7 +2206,7 @@ LevelSelect_MarkFields:
 		move.w	d0,(a6)
 
 .chksoundtest:
-		cmpi.w	#$15,(v_levselzone).w
+		cmpi.w	#$16,(v_levselzone).w
 		bne.s	.rts
 		bsr.w	LevelSelect_DrawSoundNumber
 .rts:
@@ -2216,6 +2218,7 @@ LevSel_MarkTable:	; 4 bytes per level select entry
 		dc.b   3,  6,  3,$24	; 0   GHZ1
 		dc.b   3,  6,  4,$24	; 1   GHZ2
 		dc.b   3,  6,  5,$24	; 2   GHZ3
+		dc.b   3,  6,  6,$24	; 3   GHZ4
 		dc.b   7,  6,  7,$24	; 3   MZ1
 		dc.b   7,  6,  8,$24	; 4   MZ2
 		dc.b   7,  6,  9,$24	; 5   MZ3
@@ -2272,7 +2275,7 @@ LevelSelect_DrawIcon:
 
 ; byte_96D8:
 LevSel_IconTable:
-		dc.b 0,0,0	; 0   GHZ
+		dc.b 0,0,0,0	; 0   GHZ
 		dc.b 1,1,1	; 3   MZ
 		dc.b 2,2,2	; 6   SYZ
 		dc.b 3,3,3	; 9   LZ
@@ -2441,13 +2444,13 @@ LevSelControls:
 		beq.s	.ChkDown
 		subq.w	#1,d0			; decrease by 1
 		bcc.s	.ChkDown		; >= 0?
-		moveq	#$15,d0			; set to $15
+		moveq	#$16,d0			; set to $15
 
 .ChkDown:
 		btst	#bitDn,d1
 		beq.s	.ChkUp
 		addq.w	#1,d0			; yes, add 1
-		cmpi.w	#$16,d0
+		cmpi.w	#$17,d0
 		blo.s	.ChkUp			; smaller than $16?
 		moveq	#0,d0			; if not, set to 0
 
@@ -2456,7 +2459,7 @@ LevSelControls:
 		rts
 ; ===========================================================================
 LevSelControls_CheckLR:
-		cmpi.w	#$15,(v_levselzone).w	; are we in the sound test?
+		cmpi.w	#$16,(v_levselzone).w	; are we in the sound test?
 		bne.s	LevSelControls_SwitchSide	; no
 		move.w	(v_levselsound).w,d0
 		move.b	(v_jpadpress1).w,d1
@@ -4441,13 +4444,15 @@ Map_LWall:	include	"_maps/Wall of Lava.asm"
 ; ===========================================================================
 ; >>> Various unique objects
 		include	"_incObj/0A LZ Drowning Countdown.asm" ; includes ResumeMusic
-		include	"_incObj/38 Shield and Invincibility.asm"
+		include	"_incObj/38 Shield.asm"
+		include	"_incObj/03 Invincibility Stars.asm"
 		include	"_incObj/04 Super Sonic's star.asm"
 Map_SuperSonicStar:	include	"_maps/Super Sonic's star.asm"
 		include	"_incObj/4A Unused - Special Stage Entry.asm"
 		include	"_incObj/08 LZ Water Splash.asm"
 		include	"_anim/Shield and Invincibility.asm"
-Map_Shield:	include	"_maps/Shield and Invincibility.asm"
+Map_Shield:	include	"_maps/Shield.asm"
+Map_Invincibility:	include	"_maps/Invincibility Stars.asm"
 		include	"_anim/Special Stage Entry (Unused).asm"
 Map_Vanish:	include	"_maps/Special Stage Entry (Unused).asm"
 		include	"_anim/Water Splash.asm"
@@ -4640,7 +4645,7 @@ Art_SuperSonicStarend:		even
 Art_Shield:	binclude	"artunc/Shield.unc"
 		even
 Art_Stars:	binclude	"artunc/Invincibility Stars.unc"
-		even
+Art_StarsEnd:	even
 
 	if Revision=0
 KosPM_LzSonic:	binclude	"artkospm/Unused - LZ Sonic.kospm" ; Sonic holding his breath
@@ -5133,7 +5138,7 @@ Level_Index:
 		dc.w Level_GHZ1-Level_Index, Level_GHZbg-Level_Index, Level_GHZ1Unk-Level_Index
 		dc.w Level_GHZ2-Level_Index, Level_GHZbg-Level_Index, Level_GHZ2Unk-Level_Index
 		dc.w Level_GHZ3-Level_Index, Level_GHZbg-Level_Index, Level_GHZ3Unk-Level_Index
-		dc.w Level_GHZ4Unk-Level_Index, Level_GHZ4Unk-Level_Index, Level_GHZ4Unk-Level_Index
+		dc.w Level_GHZ4-Level_Index, Level_GHZbg-Level_Index, Level_GHZ4Unk-Level_Index
 		; LZ
 		dc.w Level_LZ1-Level_Index, Level_LZbg-Level_Index, Level_LZ1Unk-Level_Index
 		dc.w Level_LZ2-Level_Index, Level_LZbg-Level_Index, Level_LZ2Unk-Level_Index
@@ -5177,6 +5182,8 @@ Level_GHZ3:	binclude	"levels/ghz3.bin"
 Level_GHZbg:	binclude	"levels/ghzbg.bin"
 		even
 Level_GHZ3Unk:	dc.l 0
+Level_GHZ4:	binclude	"levels/ghz4.bin"
+		even
 Level_GHZ4Unk:	dc.l 0
 
 Level_LZ1:	binclude	"levels/lz1.bin"
@@ -5283,7 +5290,7 @@ ObjPos_Index:
 		dc.w ObjPos_GHZ1-ObjPos_Index, ObjPos_Null-ObjPos_Index
 		dc.w ObjPos_GHZ2-ObjPos_Index, ObjPos_Null-ObjPos_Index
 		dc.w ObjPos_GHZ3-ObjPos_Index, ObjPos_Null-ObjPos_Index
-		dc.w ObjPos_GHZ1-ObjPos_Index, ObjPos_Null-ObjPos_Index
+		dc.w ObjPos_GHZ4-ObjPos_Index, ObjPos_Null-ObjPos_Index
 		; LZ
 		dc.w ObjPos_LZ1-ObjPos_Index, ObjPos_Null-ObjPos_Index
 		dc.w ObjPos_LZ2-ObjPos_Index, ObjPos_Null-ObjPos_Index
@@ -5340,7 +5347,8 @@ ObjPos_GHZ3:
 		binclude	"objpos/ghz3 (REV01).bin"
 		even
 	endif
-
+ObjPos_GHZ4:	binclude	"objpos/ghz4.bin"
+		even
 ObjPos_LZ1:
 	if Revision=0
 		binclude	"objpos/lz1 (REV00).bin"

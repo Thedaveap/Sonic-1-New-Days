@@ -1,4 +1,4 @@
-Map_05dc: mappingsTable
+Map_dcf8: mappingsTable
 	mappingsTableEntry.w	Map_aa04_0
 	mappingsTableEntry.w	Map_aa04_1
 	mappingsTableEntry.w	Map_21f7_239
@@ -45,8 +45,8 @@ Map_05dc: mappingsTable
 	mappingsTableEntry.w	Map_aa04_29
 	mappingsTableEntry.w	Map_aa04_30
 	mappingsTableEntry.w	Map_aa04_31
-	mappingsTableEntry.w	Map_da2d_240
-	mappingsTableEntry.w	Map_da2d_239
+	mappingsTableEntry.w	Map_05dc_244
+	mappingsTableEntry.w	Map_05dc_243
 	mappingsTableEntry.w	Map_aa04_32
 	mappingsTableEntry.w	Map_aa04_33
 	mappingsTableEntry.w	Map_aa04_34
@@ -242,8 +242,8 @@ Map_05dc: mappingsTable
 	mappingsTableEntry.w	Map_05dc_240
 	mappingsTableEntry.w	Map_05dc_241
 	mappingsTableEntry.w	Map_05dc_242
-	mappingsTableEntry.w	Map_05dc_243
-	mappingsTableEntry.w	Map_05dc_244
+	mappingsTableEntry.w	Map_dcf8_243
+	mappingsTableEntry.w	Map_dcf8_244
 
 Map_aa04_0:	spriteHeader
 Map_aa04_0_End
@@ -532,18 +532,18 @@ Map_aa04_31:	spriteHeader
  spritePiece -$12, $E, 3, 1, $11, 0, 0, 0, 0
 Map_aa04_31_End
 
-Map_da2d_240:	spriteHeader
- spritePiece 7, -$12, 2, 3, 0, 0, 0, 0, 0
- spritePiece -$11, -$A, 3, 4, 6, 0, 0, 0, 0
- spritePiece 7, 6, 1, 1, $12, 0, 0, 0, 0
-Map_da2d_240_End
+Map_05dc_244:	spriteHeader
+ spritePiece 7, -$13, 2, 3, 0, 0, 0, 0, 0
+ spritePiece -$11, -$B, 3, 4, 6, 0, 0, 0, 0
+ spritePiece 7, 5, 1, 1, $12, 0, 0, 0, 0
+Map_05dc_244_End
 
-Map_da2d_239:	spriteHeader
- spritePiece -2, -$17, 2, 4, 0, 0, 0, 0, 0
- spritePiece $E, -$F, 1, 2, 8, 0, 0, 0, 0
- spritePiece -$12, -7, 2, 4, $A, 0, 0, 0, 0
- spritePiece -2, 9, 1, 1, $12, 0, 0, 0, 0
-Map_da2d_239_End
+Map_05dc_243:	spriteHeader
+ spritePiece 0, -$16, 2, 4, 0, 0, 0, 0, 0
+ spritePiece $10, -$E, 1, 2, 8, 0, 0, 0, 0
+ spritePiece -$10, -6, 2, 4, $A, 0, 0, 0, 0
+ spritePiece 0, $A, 1, 1, $12, 0, 0, 0, 0
+Map_05dc_243_End
 
 Map_aa04_32:	spriteHeader
  spritePiece -2, -$12, 3, 3, 0, 0, 0, 0, 0
@@ -1680,12 +1680,12 @@ Map_05dc_242:	spriteHeader
  spritePiece -$10, -$10, 4, 4, 0, 0, 0, 0, 0
 Map_05dc_242_End
 
-Map_05dc_243:	spriteHeader
+Map_dcf8_243:	spriteHeader
  spritePiece -$10, -$10, 4, 4, 0, 0, 0, 0, 0
-Map_05dc_243_End
+Map_dcf8_243_End
 
-Map_05dc_244:	spriteHeader
+Map_dcf8_244:	spriteHeader
  spritePiece -$10, -$10, 4, 4, 0, 0, 0, 0, 0
-Map_05dc_244_End
+Map_dcf8_244_End
 
 	even

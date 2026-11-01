@@ -82,35 +82,6 @@
             }
         },
         {
-            "format": "Sonic 1.js",
-            "name": "Bubble Shield",
-            "palettes": [
-                {
-                    "path": "..\\palette\\Sonic.bin",
-                    "length": 1
-                }
-            ],
-            "art": {
-                "path": "..\\artunc\\Bubble Shield.unc",
-                "compression": "Uncompressed",
-                "offset": 0,
-                "extra": []
-            },
-            "mappings": {
-                "path": "..\\_maps\\Bubble Shield.asm",
-                "label": ""
-            },
-            "dplcs": {
-                "enabled": true,
-                "path": "..\\_maps\\Bubble Shield - Dynamic Gfx Script.asm",
-                "label": ""
-            },
-            "config": {
-                "mapMacros": true,
-                "format": "object"
-            }
-        },
-        {
             "name": "Common",
             "children": [
                 {
@@ -426,12 +397,12 @@
                                 "extra": []
                             },
                             "mappings": {
-                                "path": "../_maps/Shield and Invincibility.asm",
+                                "path": "../_maps/Shield.asm",
                                 "label": ""
                             },
                             "dplcs": {
                                 "enabled": true,
-                                "path": "..\\_maps\\Shield and Invincibility - Dynamic Gfx Script.asm",
+                                "path": "..\\_maps\\Shield - Dynamic Gfx Script.asm",
                                 "label": ""
                             },
                             "config": {
@@ -454,11 +425,11 @@
                                 "extra": []
                             },
                             "mappings": {
-                                "path": "../_maps/Shield and Invincibility.asm",
+                                "path": "../_maps/Invincibility Stars.asm",
                                 "label": ""
                             },
                             "dplcs": {
-                                "enabled": true,
+                                "enabled": false,
                                 "path": "..\\_maps\\Shield and Invincibility - Dynamic Gfx Script.asm",
                                 "label": ""
                             },
@@ -746,6 +717,35 @@
             "isDirectory": true,
             "expanded": true,
             "config": {}
+        },
+        {
+            "format": "Sonic 1.js",
+            "name": "Bubble Shield",
+            "palettes": [
+                {
+                    "path": "..\\palette\\Sonic.bin",
+                    "length": 1
+                }
+            ],
+            "art": {
+                "path": "..\\artunc\\Bubble Shield.unc",
+                "compression": "Uncompressed",
+                "offset": 0,
+                "extra": []
+            },
+            "mappings": {
+                "path": "..\\_maps\\Bubble Shield.asm",
+                "label": ""
+            },
+            "dplcs": {
+                "enabled": true,
+                "path": "..\\_maps\\Bubble Shield - Dynamic Gfx Script.asm",
+                "label": ""
+            },
+            "config": {
+                "mapMacros": true,
+                "format": "object"
+            }
         },
         {
             "name": "GHZ",
@@ -3754,7 +3754,7 @@
                     "name": "Sonic (Continue)",
                     "palettes": [
                         {
-                            "path": "../palette/Special Stage Continue Bonus.bin",
+                            "path": "..\\palette\\Sonic.bin",
                             "length": 1
                         }
                     ],
@@ -4162,34 +4162,6 @@
                     "children": [
                         {
                             "format": "Sonic 1.js",
-                            "name": "Expanded Title Card",
-                            "palettes": [
-                                {
-                                    "path": "..\\palette\\SonicOld.bin",
-                                    "length": 1
-                                }
-                            ],
-                            "art": {
-                                "path": "..\\artunc\\Title Cards Extended.unc",
-                                "compression": "Uncompressed",
-                                "offset": 0,
-                                "extra": []
-                            },
-                            "mappings": {
-                                "path": "Scratch Mappings (Flex2 only)\\ExpandedTitleCard.asm",
-                                "label": ""
-                            },
-                            "dplcs": {
-                                "enabled": false,
-                                "path": "",
-                                "label": ""
-                            },
-                            "config": {
-                                "mapMacros": true
-                            }
-                        },
-                        {
-                            "format": "Sonic 1.js",
                             "name": "Title Card Objects",
                             "palettes": [
                                 {
@@ -4198,13 +4170,13 @@
                                 }
                             ],
                             "art": {
-                                "path": "../artkospm/Title Cards.kospm",
-                                "compression": "KosinskiPlus-M",
+                                "path": "../artunc/Title Cards Extended.unc",
+                                "compression": "Uncompressed",
                                 "offset": 0,
                                 "extra": []
                             },
                             "mappings": {
-                                "path": "Scratch Mappings (Flex2 only)/TitleCardFont.asm",
+                                "path": "Scratch Mappings (Flex2 only)\\TitleCardFont.asm",
                                 "label": ""
                             },
                             "dplcs": {
@@ -4260,7 +4232,7 @@
                         }
                     ],
                     "isDirectory": true,
-                    "expanded": false,
+                    "expanded": true,
                     "config": {}
                 },
                 {

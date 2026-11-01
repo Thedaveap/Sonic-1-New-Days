@@ -8,8 +8,8 @@
 		; Green Hill Zone
 		dc.w id_GHZ_act2	; Act 1
 		dc.w id_GHZ_act3	; Act 2
-		dc.w id_MZ_act1		; Act 3
-		dc.w 0			; Act 4 (unused)
+		dc.w id_GHZ_act4	; Act 3
+		dc.w id_MZ_act1		; Act 4
 
 		; Labyrinth Zone
 		dc.w id_LZ_act2		; Act 1

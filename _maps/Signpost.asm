@@ -1,13 +1,9 @@
-Map_9eff: mappingsTable
+Map_7619: mappingsTable
 	mappingsTableEntry.w	CME_911C0926_0
 	mappingsTableEntry.w	CME_911C0926_1
 	mappingsTableEntry.w	CME_911C0926_2
 	mappingsTableEntry.w	CME_911C0926_3
-	mappingsTableEntry.w	CME_911C0926_4
-	mappingsTableEntry.w	Map_9eff_5
-	mappingsTableEntry.w	Map_9eff_6
-	mappingsTableEntry.w	Map_9eff_7
-	mappingsTableEntry.w	Map_9eff_8
+	mappingsTableEntry.w	Map_7619_4
 
 CME_911C0926_0:	spriteHeader
  spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
@@ -30,34 +26,10 @@ CME_911C0926_3:	spriteHeader
  spritePiece -4, $10, 1, 2, $10, 1, 0, 0, 0
 CME_911C0926_3_End
 
-CME_911C0926_4:	spriteHeader
+Map_7619_4:	spriteHeader
  spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
  spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
  spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
-CME_911C0926_4_End
-
-Map_9eff_5:	spriteHeader
- spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
- spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
- spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
-Map_9eff_5_End
-
-Map_9eff_6:	spriteHeader
- spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
- spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
- spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
-Map_9eff_6_End
-
-Map_9eff_7:	spriteHeader
- spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
- spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
- spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
-Map_9eff_7_End
-
-Map_9eff_8:	spriteHeader
- spritePiece -$18, -$10, 3, 4, 0, 0, 0, 0, 0
- spritePiece 0, -$10, 3, 4, $C, 0, 0, 0, 0
- spritePiece -4, $10, 1, 2, $18, 0, 0, 0, 0
-Map_9eff_8_End
+Map_7619_4_End
 
 	even

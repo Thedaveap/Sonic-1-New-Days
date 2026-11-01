@@ -186,7 +186,7 @@ unused_startloc: macro
 StartLocArray:	binclude	"startpos/ghz1.bin"
 		binclude	"startpos/ghz2.bin"
 		binclude	"startpos/ghz3.bin"
-		unused_startloc
+		binclude	"startpos/ghz4.bin"
 
 		binclude	"startpos/lz1.bin"
 		binclude	"startpos/lz2.bin"

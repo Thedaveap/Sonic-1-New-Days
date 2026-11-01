@@ -536,32 +536,32 @@ TTLCard_Got_SonicHas:	maketitlecard TitleCard_SonicHas,1,1
 TTLCard_Got_Passed:	maketitlecard TitleCard_Passed,1,2
 
 TTLCard_Got_Score:	spriteHeader		; SCORE
-	spritePiece	-$50, -8, 4, 2, $14A, 0, 0, 0, 0	; "SCOR"
-	spritePiece	-$30, -8, 1, 2, $160, 0, 0, 0, 0	; "E"
+	spritePiece	-$50, -8, 4, 2, $14A, 0, 0, 1, 0	; "SCOR"
+	spritePiece	-$30, -8, 1, 2, $160, 0, 0, 1, 0	; "E"
 	spritePiece	-$33, -9, 2, 1, TTL_SmOval, 0, 0, 0, 0	; Small oval (upper half)
 	spritePiece	-$34, -1, 2, 1, TTL_SmOval, 1, 1, 0, 0	; Small oval (lower half)
-	spritePiece	 $18, -8, 3, 2, $164, 0, 0, 0, 0	; Tally (first four digits)
-	spritePiece	 $30, -8, 4, 2, $16A, 0, 0, 0, 0	; Tally (last four digits)
+	spritePiece	 $18, -8, 3, 2, $164, 0, 0, 1, 0	; Tally (first four digits)
+	spritePiece	 $30, -8, 4, 2, $16A, 0, 0, 1, 0	; Tally (last four digits)
 TTLCard_Got_Score_End
 
 TTLCard_Got_TBonus:	spriteHeader		; TIME BONUS
-	spritePiece	-$50, -8, 4, 2, $15A, 0, 0, 0, 0	; "TIME"
-	spritePiece	-$27, -7, 4, 2, TTL_BONU, 0, 0, 0, 0	; "BONU"
-	spritePiece	-$07, -8, 1, 2, $14A, 0, 0, 0, 0	; "S"
+	spritePiece	-$50, -8, 4, 2, $15A, 0, 0, 1, 0	; "TIME"
+	spritePiece	-$27, -7, 4, 2, TTL_BONU, 0, 0, 1, 0	; "BONU"
+	spritePiece	-$08, -8, 1, 2, $14A, 0, 0, 1, 0	; "S"
 	spritePiece	-$0A, -9, 2, 1, TTL_SmOval, 0, 0, 0, 0	; Small oval (upper half)
 	spritePiece	-$0B, -1, 2, 1, TTL_SmOval, 1, 1, 0, 0	; Small oval (lower half)
-	spritePiece	 $28, -$8, 4, 2, -$10, 0, 0, 0, 0	; Tally (first four digits)
-	spritePiece	 $48, -8, 1, 2, $170, 0, 0, 0, 0	; Tally (last four digits)
+	spritePiece	 $28, -$8, 4, 2, -$10, 0, 0, 1, 0	; Tally (first four digits)
+	spritePiece	 $48, -8, 1, 2, $170, 0, 0, 1, 0	; Tally (last four digits)
 TTLCard_Got_TBonus_End
 
 TTLCard_Got_RBonus:	spriteHeader		; RING BONUS
-	spritePiece	-$50, -8, 4, 2, $152, 0, 0, 0, 0	; "RING"
-	spritePiece	-$27, -7, 4, 2, TTL_BONU, 0, 0, 0, 0	; "BONU"
-	spritePiece	-$07, -8, 1, 2, $14A, 0, 0, 0, 0	; "S"
+	spritePiece	-$50, -8, 4, 2, $152, 0, 0, 1, 0	; "RING"
+	spritePiece	-$27, -7, 4, 2, TTL_BONU, 0, 0, 1, 0	; "BONU"
+	spritePiece	-$08, -8, 1, 2, $14A, 0, 0, 1, 0	; "S"
 	spritePiece	-$0A, -9, 2, 1, TTL_SmOval, 0, 0, 0, 0	; Small oval (upper half)
 	spritePiece	-$0B, -1, 2, 1, TTL_SmOval, 1, 1, 0, 0	; Small oval (lower half)
-	spritePiece	 $28, -$8, 4, 2, -8, 0, 0, 0, 0		; Tally (first four digits)
-	spritePiece	 $48, -8, 1, 2, $170, 0, 0, 0, 0	; Tally (last four digits)
+	spritePiece	 $28, -$8, 4, 2, -8, 0, 0, 1, 0		; Tally (first four digits)
+	spritePiece	 $48, -8, 1, 2, $170, 0, 0, 1, 0	; Tally (last four digits)
 TTLCard_Got_RBonus_End
 	even
 

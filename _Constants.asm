@@ -151,6 +151,7 @@ act4:			equ 3
 id_GHZ_act1:		equ (id_GHZ<<8)+act1			; $0000
 id_GHZ_act2:		equ (id_GHZ<<8)+act2			; $0001
 id_GHZ_act3:		equ (id_GHZ<<8)+act3			; $0002
+id_GHZ_act4:		equ (id_GHZ<<8)+act4	; $0003
 
 id_LZ_act1:		equ (id_LZ<<8)+act1			; $0100
 id_LZ_act2:		equ (id_LZ<<8)+act2			; $0101
@@ -655,7 +656,7 @@ ArtTile_HUDRings:		equ ArtTile_HUD+$30
 
 ArtTile_Sonic:			equ $780
 ArtTile_Points:			equ $79E
-ArtTile_Lamppost:		equ $553
+ArtTile_Lamppost:		equ $563
 ArtTile_SpinDust:		equ $F400/tile_size		; = $7A0
 ArtTile_Ring:			equ $7B2
 ArtTile_Ring_Loss:		equ ArtTile_Ring+4
